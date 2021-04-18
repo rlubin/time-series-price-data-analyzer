@@ -17,7 +17,10 @@ def main():
     price_dfs = []
     # download whatever isn't downloaded
     # on_pc needs to be a list of name.csv strings
-    on_pc = os.scandir('./price_data/')
+
+    on_pc = os.scandir(os.path.abspath(
+        os.path.join(os.getcwd(), "price_data")))
+    # on_pc = os.scandir('./price_data/')
     has = []
     for d in on_pc:
         name = os.path.splitext(d)[0]
