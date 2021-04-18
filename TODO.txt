@@ -1,0 +1,1 @@
+convert the tradingview screener to a list of tickers for get_data.py
